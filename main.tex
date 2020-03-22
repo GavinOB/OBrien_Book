@@ -1,0 +1,68 @@
+\documentclass[oneside,letterpaper,12pt]{memoir}
+\usepackage[T1]{fontenc}
+\usepackage{newpxtext,newpxmath}
+\usepackage[USenglish]{babel}
+\usepackage{array}
+
+\setlrmarginsandblock{1.5in}{1.5in}{*}
+\setulmarginsandblock{1.3in}{1.2in}{*}
+\checkandfixthelayout
+
+\newcommand{\MainPerson}[1]{\textbf{\textsc{#1}}}
+\newcommand{\KidNum}[2]{\noindent\makebox[0.5in][l]{\makebox[0.4in][r]{#1\hfill #2}}}
+\newcommand{\KidName}[1]{\textsc{#1}}
+\newcommand{\GrandkidName}[1]{\textit{#1}}
+\newcommand{\GrandkidNum}[1]{\noindent\makebox[0.9in]{\makebox[0.75in][r]{\hfill #1}}}
+\newenvironment{KidsIntro}
+	{
+	\vspace{0.5\baselineskip}
+	\begin{small}
+	}
+	{
+	\par
+	\end{small}
+	\vspace{0.5\baselineskip}
+	}
+\newenvironment{Kids}
+	{
+		\begin{small}
+		\begin{hangparas}{0.65in}{1}
+	}
+	{
+		\end{hangparas}
+		\end{small}	
+	}
+\newenvironment{KidsMoreText}
+	{
+		\setlength{\parindent}{0.9in}
+	}
+	{
+	
+	}
+\newenvironment{Grandkids}
+	{
+		\begin{small}
+		\begin{hangparas}{1.06in}{1}
+	}
+	{
+		\end{hangparas}
+		\end{small}
+	}
+
+\begin{document}
+
+\author{Gavin E. O'Brien}
+\title{American Descendants of William O'Brien and Mary Sexton of Watergrasshill, Ireland}
+\date{March 2020}
+
+\maketitle
+\tableofcontents
+
+\include{./TeX_files/chapter01}
+\include{./TeX_files/chapter02}
+
+\end{document}
+
+% TO DO
+% Add code to github
+% BibLatex
