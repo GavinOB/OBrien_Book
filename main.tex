@@ -1,23 +1,30 @@
 \documentclass[oneside,letterpaper,12pt]{memoir}
 \usepackage[T1]{fontenc}
-\usepackage{newpxtext,newpxmath}
+\usepackage{newpxtext,newpxmath} % Palatino typeface
 \usepackage[USenglish]{babel}
 \usepackage{array}
-\usepackage[super]{natbib}
+\usepackage[super]{natbib} % superscript numerical citations
 \usepackage{hyperref}
 
+% Set custom page margins
 \setlrmarginsandblock{1.5in}{1.5in}{*}
 \setulmarginsandblock{1.3in}{1.2in}{*}
 \checkandfixthelayout
 
-\AtBeginEnvironment{quote}{\small}
-\AtBeginEnvironment{quotation}{\small}
+% Smaller text for quote & quotation blocks
+\let\quoteOLD\quote
+\def\quote{\quoteOLD\small}
+\let\quotationOLD\quotation
+\def\quotation{\quotationOLD\small}
 
+% Font styling for people and numbered lists
 \newcommand{\MainPerson}[1]{\textbf{\textsc{#1}}}
 \newcommand{\KidNum}[2]{\noindent\makebox[0.5in][l]{\makebox[0.4in][r]{#1\hfill #2}}}
 \newcommand{\KidName}[1]{\textsc{#1}}
 \newcommand{\GrandkidName}[1]{\textit{#1}}
 \newcommand{\GrandkidNum}[1]{\noindent\makebox[0.9in]{\makebox[0.75in][r]{\hfill #1}}}
+
+% Font styling for kids and grandkids sections
 \newenvironment{KidsIntro}
 	{
 	\vspace{0.5\baselineskip}
@@ -63,9 +70,11 @@
 \maketitle
 \tableofcontents
 
-\include{./Chapter01/chapter01_test}
+%\include{./Chapter01/chapter01_test}
+\include{./Chapter01/chapter01}
 \include{./Chapter02/chapter02}
 \include{./bibliography}
+\include{./person_list}
 
 \end{document}
 
