@@ -3,8 +3,8 @@
 \usepackage{newpxtext,newpxmath} % Palatino typeface
 \usepackage[USenglish]{babel}
 \usepackage{array}
-\usepackage[super]{natbib} % superscript numerical citations
-\usepackage{hyperref}
+\usepackage[square,super]{natbib} % superscript numerical citations
+\usepackage[hidelinks]{hyperref}
 
 % Set custom page margins
 \setlrmarginsandblock{1.5in}{1.5in}{*}
@@ -16,6 +16,11 @@
 \def\quote{\quoteOLD\small}
 \let\quotationOLD\quotation
 \def\quotation{\quotationOLD\small}
+
+% Rename "Bibliography" to "Notes"
+\addto{\captionsUSenglish}{%
+	\renewcommand{\bibname}{Notes}
+}
 
 % Font styling for people and numbered lists
 \newcommand{\MainPerson}[1]{\textbf{\textsc{#1}}}
@@ -64,7 +69,7 @@
 \begin{document}
 
 \author{Gavin E. O'Brien}
-\title{American Descendants of William O'Brien and Mary Sexton of Watergrasshill, Ireland}
+\title{Descendants of William O'Brien and Mary Sexton of Watergrasshill, Ireland}
 \date{March 2020}
 
 \maketitle
