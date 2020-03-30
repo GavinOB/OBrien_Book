@@ -1,0 +1,22 @@
+ \documentclass{article}
+\usepackage[all]{genealogytree}
+\begin{document}
+	\section{First Test}
+	\begin{tikzpicture}
+	\genealogytree[template=database traditional,box={halign=left,width=25mm}]{ 
+		child{
+			g{name={William O'Brien = Mary Sexton}}
+			child{
+				g{name={Abigail O'Brien \\= Michael Dooley}} 
+				c{name={Hannah Dooley}}
+				c{name={Margaret Dooley}}
+			}
+			c[]{name={John O'Brien \\= Mary Mahoney}}
+			c{name={Ann O'Brien \\= Michael Dailey}}
+			c{name={Edward O'Brien \\= Bridget Linnehan}}
+			c{name={Mary O'Brien \\= David Ward}}
+			c{name={Michael O'Brien \\= Bridget Colbert \\= Mary Fields}}
+		}
+	}
+	\end{tikzpicture}
+\end{document}

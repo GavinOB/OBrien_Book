@@ -1,0 +1,26 @@
+%\title{Template for creating a family tree}
+%
+% For further help and instructions see:
+% http://latex-community.org/know-how/latex/50-latex-graphics-figures-tables/427-stemma-tikz
+
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+\begin{document}
+
+\begin{tikzpicture}[level 1/.style={sibling distance=3.5cm},level 2/.style={sibling distance=2.5cm},align=center]
+	\node {William O'Brien = Mary Sexton}[edge from parent fork down]
+		child { node {Abigail O'Brien \\= Michael Dooley}
+			child[grow=down] { node {Hannah Dooley = Jeremiah Cooney = Michael Cusick}}
+			child[grow=down] { node {Margaret Dooley = William Simonds = Robert Fernald}} }
+		child { node {John O'Brien \\= Mary Mahoney}}
+		child { node {Ann O'Brien \\= Michael Dailey}}
+		child { node {Edward O'Brien \\= Bridget Linnehan}}
+		child { node {Mary O'Brien \\= David Ward}}
+		child { node {Michael O'Brien \\= Bridget Colbert \\= Mary Fields}}
+	 		
+	;
+\end{tikzpicture}
+
+\end{document}
