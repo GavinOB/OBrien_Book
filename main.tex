@@ -1,7 +1,7 @@
 \documentclass[oneside,letterpaper,12pt]{memoir}
+\usepackage[USenglish]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{newpxtext,newpxmath} % Palatino typeface
-\usepackage[USenglish]{babel}
 \usepackage{array}
 \usepackage[square,super]{natbib} % superscript numerical citations
 \usepackage[hidelinks]{hyperref}
@@ -24,6 +24,7 @@
 
 % Font styling for people and numbered lists
 \newcommand{\MainPerson}[1]{\textbf{\textsc{#1}}}
+\newcommand{\Lineage}[2]{\textit{#2}{\textsuperscript{#1}}}
 \newcommand{\KidNum}[2]{\noindent\makebox[0.5in][l]{\makebox[0.4in][r]{#1\hfill #2}}}
 \newcommand{\KidName}[1]{\textsc{#1}}
 \newcommand{\GrandkidName}[1]{\textit{#1}}
@@ -83,6 +84,7 @@
 \chapter{Second Generation}
 \input{./Chapter04/Abigail2OBrien}
 \input{./Chapter04/John2OBrien}
+\input{./Chapter04/Edward2OBrien}
 \include{./person_list}
 \include{./bibliography}
 
