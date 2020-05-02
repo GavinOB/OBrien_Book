@@ -29,7 +29,8 @@
 \newcommand{\KidNum}[2]{\noindent\makebox[0.6in][l]{\makebox[0.5in][r]{#1\hfill #2}}}
 \newcommand{\KidName}[1]{\textsc{#1}}
 \newcommand{\GrandkidName}[1]{\textit{#1}}
-\newcommand{\GrandkidNum}[1]{\noindent\makebox[0.9in]{\makebox[0.75in][r]{\hfill #1}}}
+%\newcommand{\GrandkidNum}[1]{\noindent\makebox[0.9in]{\makebox[0.75in][r]{\hfill #1}}}
+\newcommand{\GrandkidNum}[1]{\noindent\makebox[1.0in]{\makebox[0.95in][r]{\hfill #1}}}
 
 % Font styling for kids and grandkids sections
 \newenvironment{KidsIntro}
@@ -53,15 +54,26 @@
 	}
 \newenvironment{KidsMoreText}
 	{
-		\setlength{\parindent}{0.9in}
+		\setlength{\parindent}{1.0in}
 	}
 	{
 	
 	}
+
+\newenvironment{GrandkidsIntro}
+{
+	\vspace{0.5\baselineskip}
+	\setlength{\parindent}{0.65in}
+	}
+	{
+		\par
+	\vspace{0.5\baselineskip}
+}
+
 \newenvironment{Grandkids}
 	{
 		\begin{small}
-		\begin{hangparas}{1.06in}{1}
+		\begin{hangparas}{1.31in}{1}
 	}
 	{
 		\end{hangparas}
@@ -77,7 +89,7 @@
 \maketitle
 \tableofcontents
 
-%\include{./Chapter01/chapter01_test}
+\include{./Chapter01/chapter01_test}
 \include{./Chapter01/chapter01}
 \include{./Chapter02/chapter02}
 \chapter{First Generation}
@@ -96,6 +108,7 @@
 \input{./Chapter05/Michael3OBrien}
 \input{./Chapter05/Frances3OBrien}
 \input{./Chapter05/Edward3OBrien}
+\input{./Chapter06/Catharine4Simonds}
 \include{./person_list}
 \include{./bibliography}
 
