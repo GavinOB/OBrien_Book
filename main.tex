@@ -26,11 +26,11 @@
 % Font styling for people and numbered lists
 \newcommand{\MainPerson}[1]{\textbf{\textsc{#1}}}
 \newcommand{\Lineage}[2]{\textit{#2}{\textsuperscript{#1}}}
-\newcommand{\KidNum}[2]{\noindent\fbox{\makebox[0.55in][l]{\fbox{\makebox[0.45in][r]{#1\hfill #2}}}}}
+\newcommand{\KidNum}[2]{\noindent\makebox[0.65in][l]{\makebox[0.55in][r]{#1\hfill #2}}}
 \newcommand{\KidName}[1]{\textsc{#1}}
 \newcommand{\GrandkidName}[1]{\textit{#1}}
 %\newcommand{\GrandkidNum}[1]{\noindent\makebox[0.9in]{\makebox[0.75in][r]{\hfill #1}}}
-\newcommand{\GrandkidNum}[1]{\noindent\makebox[1.0in]{\makebox[0.95in][r]{\hfill #1}}}
+\newcommand{\GrandkidNum}[1]{\noindent\makebox[1.1in]{\makebox[0.95in][r]{\hfill #1}}}
 
 % Font styling for kids and grandkids sections
 \newenvironment{KidsIntro}
@@ -73,11 +73,12 @@
 \newenvironment{Grandkids}
 	{
 		\begin{small}
-		\begin{hangparas}{1.31in}{1}
+		\begin{hangparas}{1.1in}{1}
 	}
 	{
 		\end{hangparas}
 		\end{small}
+		\vspace{0.5\baselineskip}
 	}
 
 \begin{document}
@@ -109,6 +110,10 @@
 \input{./Chapter05/Frances3OBrien}
 \input{./Chapter05/Edward3OBrien}
 \input{./Chapter06/Catharine4Simonds}
+\input{./Chapter06/Abigail4Simonds}
+\input{./Chapter06/Caroline4Fernald}
+\input{./Chapter06/Sarah4Fernald}
+\input{./Chapter06/Robert4Fernald}
 \include{./person_list}
 \include{./bibliography}
 
