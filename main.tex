@@ -2,10 +2,15 @@
 \usepackage[USenglish]{babel}
 \usepackage[en-US]{datetime2}
 \usepackage[T1]{fontenc}
-\usepackage{newpxtext,newpxmath} % Palatino typeface
+% \usepackage{newpxtext,newpxmath} % Palatino typeface
+% \usepackage{tgtermes} % Based on Nimbus 9
+\usepackage[textlf]{MinionPro}
 \usepackage{array}
-\usepackage[square,super]{natbib} % superscript numerical citations
+\usepackage[super,comma,square]{natbib} % superscript numerical citations
 \usepackage[hidelinks]{hyperref}
+
+% Don't reset person numbering between chapters
+\counterwithout{section}{chapter}
 
 % Set custom page margins
 \setlrmarginsandblock{1.5in}{1.5in}{*}
@@ -90,7 +95,7 @@
 \maketitle
 \tableofcontents
 
-\include{./Chapter01/chapter01_test}
+% \include{./Chapter01/chapter01_test}
 \include{./Chapter01/chapter01}
 \include{./Chapter02/chapter02}
 \chapter{First Generation}
@@ -109,11 +114,23 @@
 \input{./Chapter05/Michael3OBrien}
 \input{./Chapter05/Frances3OBrien}
 \input{./Chapter05/Edward3OBrien}
+\chapter{Fourth Generation}
 \input{./Chapter06/Catharine4Simonds}
 \input{./Chapter06/Abigail4Simonds}
 \input{./Chapter06/Caroline4Fernald}
 \input{./Chapter06/Sarah4Fernald}
 \input{./Chapter06/Robert4Fernald}
+\input{./Chapter06/Francis4OBrien}
+\input{./Chapter06/Pauline4OBrien}
+\input{./Chapter06/Mildred4OBrien}
+\input{./Chapter06/MaryAlice4Flynn}
+\input{./Chapter06/Edith4Wickens}
+\input{./Chapter06/Albert4Wickens}
+\input{./Chapter06/Ethel4Wickens}
+\input{./Chapter06/Catherine4OBrien}
+\input{./Chapter06/Frances4OBrien}
+\input{./Chapter06/Edward4OBrien}
+\input{./Chapter06/Beatrice4OBrien}
 \include{./person_list}
 \include{./bibliography}
 
