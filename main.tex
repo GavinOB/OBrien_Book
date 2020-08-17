@@ -5,7 +5,8 @@
 \usepackage[T1]{fontenc}
 \usepackage[textlf]{MinionPro}
 \usepackage{array}
-\usepackage[super,comma,square]{natbib} % superscript numerical citations
+\usepackage[super,comma,square,sectionbib]{natbib} % superscript numerical citations
+\renewcommand*{\bibfont}{\raggedright\small}
 \usepackage[hidelinks]{hyperref}
 \usepackage{graphicx}
 \usepackage{microtype}
@@ -26,9 +27,9 @@
 \let\quotationOLD\quotation
 \def\quotation{\quotationOLD\small}
 
-% Rename "Bibliography" to "Notes"
+% Rename "Bibliography"
 \addto{\captionsUSenglish}{%
-	\renewcommand{\bibname}{Notes}
+	\renewcommand{\bibname}{Citations}
 }
 
 % Font styling for people and numbered lists
@@ -98,6 +99,8 @@
 \maketitle
 \tableofcontents
 
+\renewcommand\bibsection{\section*{Citations}} % remove citations from table of contents
+
 % \include{./Chapter01/chapter01_test}
 \include{./Chapter01/chapter01}
 \include{./Chapter02/chapter02}
@@ -135,7 +138,7 @@
 \input{./Chapter06/Edward4OBrien}
 \input{./Chapter06/Beatrice4OBrien}
 \include{./person_list}
-\include{./bibliography}
+% \include{./bibliography}
 
 \clearpage
 
