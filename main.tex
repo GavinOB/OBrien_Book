@@ -1,25 +1,42 @@
-\documentclass[oneside,letterpaper,12pt]{memoir}
+% \documentclass[oneside,letterpaper,12pt]{memoir}
+\documentclass[11pt,showtrims,draft]{memoir}
+\setstocksize{9.25in}{6.125in}
+\settrimmedsize{9in}{6in}{*}
 \usepackage[USenglish]{babel}
 \usepackage{csquotes}
 \usepackage[en-US]{datetime2}
 \usepackage[T1]{fontenc}
 \usepackage[textlf]{MinionPro}
 \usepackage{array}
+\usepackage{pdfpages}
+\usepackage{dpfloat}
 \usepackage[super,comma,square]{natbib} % superscript numerical citations
 \renewcommand*{\bibfont}{\raggedright\small}
-\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks = true,
+	urlcolor = blue,
+	linkcolor = blue,
+	citecolor = blue
+}
 \usepackage{graphicx}
-\usepackage{microtype}
+\graphicspath{ {./images/} }
+\usepackage[final]{microtype}
 \usepackage{makeidx}
-\frenchspacing
 \makeindex
+\frenchspacing
+
+%\usepackage{draftwatermark}
+%\SetWatermarkText{Draft}
+%\SetWatermarkScale{2}
+%\SetWatermarkColor[gray]{0.9}
 
 % Don't reset person numbering between chapters
 \counterwithout{section}{chapter}
 
 % Set custom page margins
-\setlrmarginsandblock{1.5in}{1.5in}{*}
-\setulmarginsandblock{1.3in}{1.2in}{*}
+\setlrmarginsandblock{0.75in}{0.5in}{*}
+\setulmarginsandblock{0.5in}{0.5in}{*}
 \checkandfixthelayout
 
 % Smaller text for quote & quotation blocks
@@ -93,8 +110,10 @@
 
 \begin{document}
 
+\frontmatter
+
 \author{Gavin E. O'Brien}
-\title{Descendants of William O'Brien and Mary Sexton of Watergrasshill, Ireland}
+\title{Descendants of William O'Brien of Watergrasshill, Ireland}
 \date{\today}
 
 \maketitle
@@ -102,11 +121,20 @@
 
 \renewcommand\bibsection{\section*{Citations}} % remove citations from table of contents
 
+
+
+\include{./Intro/Intro}
+
+\includepdf{descendant_1.pdf}
+\includepdf{descendant_2.pdf}
+
+\listoffigures
+
+\mainmatter
 % \include{./Chapter01/chapter01_test}
-\chapter{The O'Briens in Ireland}
 \include{./Chapter01/O'Briens_in_Ireland}
+\include{./Chapter02/O'Briens_in_Boston}
 \include{./Chapter01/Name_and_Lineage}
-\include{./Chapter02/chapter02}
 \chapter{First Generation}
 \input{./Chapter03/William1OBrien}
 \chapter{Second Generation}
@@ -140,6 +168,12 @@
 \input{./Chapter06/Frances4OBrien}
 \input{./Chapter06/Edward4OBrien}
 \input{./Chapter06/Beatrice4OBrien}
+
+\backmatter
+
+\chapter{Appendix}
+\include{./Appendix/cemetery}
+
 \include{./person_list}
 \include{./bibliography}
 
