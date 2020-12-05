@@ -1,5 +1,5 @@
 % \documentclass[oneside,letterpaper,12pt]{memoir}
-\documentclass[11pt,showtrims,draft]{memoir}
+\documentclass[11pt,showtrims]{memoir}
 \setstocksize{9.25in}{6.125in}
 \settrimmedsize{9in}{6in}{*}
 \usepackage[USenglish]{babel}
@@ -10,6 +10,7 @@
 \usepackage{array}
 \usepackage{pdfpages}
 \usepackage{dpfloat}
+\usepackage{dirtree}
 \usepackage[super,comma,square]{natbib} % superscript numerical citations
 \renewcommand*{\bibfont}{\raggedright\small}
 \usepackage{hyperref}
@@ -120,8 +121,6 @@
 \tableofcontents
 
 \renewcommand\bibsection{\section*{Citations}} % remove citations from table of contents
-
-
 
 \include{./Intro/Intro}
 
