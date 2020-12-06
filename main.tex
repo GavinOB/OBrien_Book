@@ -1,13 +1,12 @@
 % \documentclass[oneside,letterpaper,12pt]{memoir}
-\documentclass[11pt,showtrims]{memoir}
-\setstocksize{9.25in}{6.125in}
-\settrimmedsize{9in}{6in}{*}
+\documentclass[tikz,border=10pt,multi,dvipsnames,svgnames,x11names,11pt,showtrims,oneside]{memoir}
+%\setstocksize{9.25in}{6.125in}
+%\settrimmedsize{9in}{6in}{*}
 \usepackage[USenglish]{babel}
 \usepackage{csquotes}
 \usepackage[en-US]{datetime2}
 \usepackage[T1]{fontenc}
 \usepackage[textlf]{MinionPro}
-\usepackage{array}
 \usepackage{pdfpages}
 \usepackage{dpfloat}
 \usepackage{dirtree}
@@ -23,22 +22,22 @@
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 \usepackage[final]{microtype}
-\usepackage{makeidx}
 \makeindex
+\showindexmarks
 \frenchspacing
 
-%\usepackage{draftwatermark}
-%\SetWatermarkText{Draft}
-%\SetWatermarkScale{2}
-%\SetWatermarkColor[gray]{0.9}
+\usepackage{draftwatermark}
+\SetWatermarkText{Draft}
+\SetWatermarkScale{2}
+\SetWatermarkColor[gray]{0.9}
 
 % Don't reset person numbering between chapters
 \counterwithout{section}{chapter}
 
 % Set custom page margins
-\setlrmarginsandblock{0.75in}{0.5in}{*}
-\setulmarginsandblock{0.5in}{0.5in}{*}
-\checkandfixthelayout
+%\setlrmarginsandblock{0.75in}{0.5in}{*}
+%\setulmarginsandblock{0.5in}{0.5in}{*}
+%\checkandfixthelayout
 
 % Smaller text for quote & quotation blocks
 \let\quoteOLD\quote
