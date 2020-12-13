@@ -1,5 +1,4 @@
-% \documentclass[oneside,letterpaper,12pt]{memoir}
-\documentclass[tikz,border=10pt,multi,dvipsnames,svgnames,x11names,11pt,showtrims,oneside]{memoir}
+\documentclass[11pt,oneside]{memoir}
 %\setstocksize{9.25in}{6.125in}
 %\settrimmedsize{9in}{6in}{*}
 \usepackage[USenglish]{babel}
@@ -9,9 +8,22 @@
 \usepackage[textlf]{MinionPro}
 \usepackage{pdfpages}
 \usepackage{dpfloat}
-\usepackage{dirtree}
 \usepackage[super,comma,square]{natbib} % superscript numerical citations
 \renewcommand*{\bibfont}{\raggedright\small}
+\newcommand{\bb}[1]{\textbf{\hyperpage{#1}}} % needed for bold & hyperlinked index pages
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage[final]{microtype}
+\usepackage{imakeidx}
+\makeindex[intoc]
+% \showindexmarks 
+\frenchspacing
+
+\usepackage{draftwatermark}
+\SetWatermarkText{Draft}
+\SetWatermarkScale{2}
+\SetWatermarkColor[gray]{0.9}
+
 \usepackage{hyperref}
 \hypersetup{
 	colorlinks = true,
@@ -19,17 +31,6 @@
 	linkcolor = blue,
 	citecolor = blue
 }
-\usepackage{graphicx}
-\graphicspath{ {./images/} }
-\usepackage[final]{microtype}
-\makeindex
-\showindexmarks
-\frenchspacing
-
-\usepackage{draftwatermark}
-\SetWatermarkText{Draft}
-\SetWatermarkScale{2}
-\SetWatermarkColor[gray]{0.9}
 
 % Don't reset person numbering between chapters
 \counterwithout{section}{chapter}
@@ -113,7 +114,7 @@
 \frontmatter
 
 \author{Gavin E. O'Brien}
-\title{Descendants of William O'Brien of Watergrasshill, Ireland}
+\title{Descendants of William O'Brien of Watergrasshill, Ireland and Boston, Massachusetts}
 \date{\today}
 
 \maketitle
@@ -123,8 +124,9 @@
 
 \include{./Intro/Intro}
 
-\includepdf{descendant_1.pdf}
-\includepdf{descendant_2.pdf}
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Chart: First Three Generations}
+\includepdf[pages=1-2]{descendant.pdf}
 
 \listoffigures
 
@@ -177,6 +179,7 @@
 
 \clearpage
 
+\indexprologue{Note: \textbf{bold} page numbers indicate the individual's main profile. Superscripted numbers show the individual's generation, starting with 1 for the oldest generation (William\textsuperscript{1} O'Brien).}
 \printindex
 
 \end{document}
