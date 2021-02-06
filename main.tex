@@ -19,10 +19,10 @@
 % \showindexmarks 
 \frenchspacing
 
-\usepackage{draftwatermark}
-\SetWatermarkText{Draft}
-\SetWatermarkScale{2}
-\SetWatermarkColor[gray]{0.9}
+%\usepackage{draftwatermark}
+%\SetWatermarkText{Draft}
+%\SetWatermarkScale{2}
+%\SetWatermarkColor[gray]{0.9}
 
 \usepackage[pagebackref]{hyperref}
 \hypersetup{
@@ -31,6 +31,7 @@
 	linkcolor = blue,
 	citecolor = blue
 }
+\urlstyle{same}
 
 % Don't reset person numbering between chapters
 \counterwithout{section}{chapter}
@@ -109,7 +110,7 @@
 		\vspace{0.5\baselineskip}
 	}
 
-\begin{document}
+ \begin{document}
 
 \frontmatter
 
@@ -136,49 +137,48 @@
 \include{./Chapter02/O'Briens_in_Boston}
 \include{./Chapter01/Name_and_Lineage}
 \chapter{First Generation}
-\input{./Chapter03/William1OBrien}
+\include{./Chapter03/William1OBrien}
 \chapter{Second Generation}
-\input{./Chapter04/Abigail2OBrien}
-\input{./Chapter04/John2OBrien}
-\input{./Chapter04/Edward2OBrien}
-\input{./Chapter04/Mary2OBrien}
-\input{./Chapter04/Michael2OBrien}
+\include{./Chapter04/Abigail2OBrien}
+\include{./Chapter04/John2OBrien}
+\include{./Chapter04/Edward2OBrien}
+\include{./Chapter04/Mary2OBrien}
+\include{./Chapter04/Michael2OBrien}
 \chapter{Third Generation}
-\input{./Chapter05/Margaret3Dooley}
-\input{./Chapter05/William3OBrien}
-\input{./Chapter05/John3OBrien}
-\input{./Chapter05/Hannah3Ward}
-\input{./Chapter05/Michael3OBrien}
-\input{./Chapter05/Frances3OBrien}
-\input{./Chapter05/Edward3OBrien}
+\include{./Chapter05/Margaret3Dooley}
+\include{./Chapter05/William3OBrien}
+\include{./Chapter05/John3OBrien}
+\include{./Chapter05/Hannah3Ward}
+\include{./Chapter05/Michael3OBrien}
+\include{./Chapter05/Frances3OBrien}
+\include{./Chapter05/Edward3OBrien}
 \chapter{Fourth Generation}
-\input{./Chapter06/Catharine4Simonds}
-\input{./Chapter06/Abigail4Simonds}
-\input{./Chapter06/Caroline4Fernald}
-\input{./Chapter06/Sarah4Fernald}
-\input{./Chapter06/Robert4Fernald}
-\input{./Chapter06/Francis4OBrien}
-\input{./Chapter06/Pauline4OBrien}
-\input{./Chapter06/Mildred4OBrien}
-\input{./Chapter06/MaryAlice4Flynn}
-\input{./Chapter06/Edith4Wickens}
-\input{./Chapter06/Albert4Wickens}
-\input{./Chapter06/Ethel4Wickens}
-\input{./Chapter06/Catherine4OBrien}
-\input{./Chapter06/Frances4OBrien}
-\input{./Chapter06/Edward4OBrien}
-\input{./Chapter06/Beatrice4OBrien}
+\include{./Chapter06/Catharine4Simonds}
+\include{./Chapter06/Abigail4Simonds}
+\include{./Chapter06/Caroline4Fernald}
+\include{./Chapter06/Sarah4Fernald}
+\include{./Chapter06/Robert4Fernald}
+\include{./Chapter06/Francis4OBrien}
+\include{./Chapter06/Pauline4OBrien}
+\include{./Chapter06/Mildred4OBrien}
+\include{./Chapter06/MaryAlice4Flynn}
+\include{./Chapter06/Edith4Wickens}
+\include{./Chapter06/Albert4Wickens}
+\include{./Chapter06/Ethel4Wickens}
+\include{./Chapter06/Catherine4OBrien}
+\include{./Chapter06/Frances4OBrien}
+\include{./Chapter06/Edward4OBrien}
+\include{./Chapter06/Beatrice4OBrien}
+\appendix
+\include{./Appendix/cemetery}
+\include{./person_list}
 
 \backmatter
 
-\chapter{Appendix}
-\include{./Appendix/cemetery}
-
-\include{./person_list}
 \include{./bibliography}
 \include{./credits}
 
-\clearpage
+\cleardoublepage
 
 \indexprologue{Note: \textbf{bold} page numbers indicate the individual's main profile. Superscripted numbers show the individual's generation, starting with 1 for the oldest generation (William\textsuperscript{1} O'Brien).}
 \printindex
