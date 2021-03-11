@@ -8,7 +8,7 @@
 \usepackage[textlf]{MinionPro}
 \usepackage{pdfpages}
 \usepackage{dpfloat}
-\usepackage[super,comma,square]{natbib} % superscript numerical citations
+\usepackage[super,comma,square,sectionbib,numbers,sort&compress]{natbib} % superscript numerical citations
 \renewcommand*{\bibfont}{\raggedright\small}
 \newcommand{\bb}[1]{\textbf{\hyperpage{#1}}} % needed for bold & hyperlinked index pages
 \usepackage{graphicx}
@@ -137,12 +137,14 @@
 \include{./Chapter01/Name_and_Lineage}
 \chapter{First Generation}
 \input{./Chapter03/William1OBrien}
+\input{./Chapter03/Gen1bib}
 \chapter{Second Generation}
 \input{./Chapter04/Abigail2OBrien}
 \input{./Chapter04/John2OBrien}
 \input{./Chapter04/Edward2OBrien}
 \input{./Chapter04/Mary2OBrien}
 \input{./Chapter04/Michael2OBrien}
+\input{./Chapter04/Gen2bib}
 \chapter{Third Generation}
 \input{./Chapter05/Margaret3Dooley}
 \input{./Chapter05/William3OBrien}
@@ -151,6 +153,7 @@
 \input{./Chapter05/Michael3OBrien}
 \input{./Chapter05/Frances3OBrien}
 \input{./Chapter05/Edward3OBrien}
+\input{./Chapter05/Gen3bib}
 \chapter{Fourth Generation}
 \input{./Chapter06/Catharine4Simonds}
 \input{./Chapter06/Abigail4Simonds}
@@ -168,14 +171,15 @@
 \input{./Chapter06/Frances4OBrien}
 \input{./Chapter06/Edward4OBrien}
 \input{./Chapter06/Beatrice4OBrien}
-\input{./further_research}
+\input{./Chapter06/Gen4bib}
 \appendix
+\input{./further_research}
 \include{./Appendix/cemetery}
 \include{./person_list}
+\include{./Appendixbib}
 
 \backmatter
 
-\include{./bibliography}
 \include{./credits}
 
 \indexprologue{Note: \textbf{bold} page numbers indicate the individual's main profile. Superscripted numbers show the individual's generation, starting with 1 for the oldest generation (William\textsuperscript{1} O'Brien).}
