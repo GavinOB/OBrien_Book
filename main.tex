@@ -52,9 +52,8 @@
 
 % Rename "Bibliography"
 \addto{\captionsUSenglish}{%
-	\renewcommand{\bibname}{Chapter \thechapter\ Citations}
+	\renewcommand{\bibname}{\chaptername\ \thechapter\ Citations}
 }
-
 
 % Font styling for people and numbered lists
 \newcommand{\MainPerson}[1]{\textbf{\textsc{#1}}}
@@ -135,58 +134,23 @@
 \footnotesize
 \parindent 0pt
 \parskip \baselineskip
-\textcopyright{} 2021 Gavin E. O'Brien \\
-All rights reserved.
+\begin{figure}
+	\includegraphics[width=88px]{by-nc}
+\end{figure}
+\textcopyright 2021 by Gavin E. O'Brien\\
+Unless otherwise stated, this work is licensed under Creative Commons Attribution-NonCommercial 4.0 International. To view a copy of this license, visit \url{http://creativecommons.org/licenses/by-nc/4.0/}
 
-This work may be distributed and/or modified under the conditions
-of the LaTeX Project Public License, either version~1.3 of this license
-or (at your option) any later version. The latest version is in \\
-\hspace*{2em} \url{http://www.latex-project.org/lppl.txt} \\
-and version~1.3 or later is part of all distributions of LaTeX
-version 2005/12/01 or later.
-
-This work has the LPPL maintenance status `maintained'.
-
-The Current Maintainer of this work is Peter Wilson.
-
-The work consists of the file \texttt{titlepages.tex} and the
-derived file \texttt{titlepages.pdf}.
-
-The paper used in this publication may meet the minimum 
-requirements of the American National Standard for 
-Information Sciences --- Permanence of Paper for Printed
-Library Materials, ANSI Z39.48--1984.
-
-\begin{center}
-	12 11 10 09 08 07\hspace{2em}8 7 6 5 4 3 %2 
-\end{center}
+See ``Credits'' chapter for image attributions.
 
 \begin{center}
 	\begin{tabular}{ll}
-		First edition:  & January 2007 \\
-		Second impression, with minor extensions & January 2009 \\
-		Third impression, with minor extensions & July 2010 
+		First edition:  & March 2021 \\
 	\end{tabular}
 \end{center}
 
-\vfill
-
-Wilson, Peter.\\
-\hspace*{2em} Some Examples of Title Pages / Peter Wilson. -- \\
-\hspace*{1em} 1st Herries Press ed. \\
-\hspace*{2em} p. \hspace*{2em} cm. \\
-\hspace*{2em} Includes illustrations, bibliographical references and index. \\
-\hspace*{2em} ISBN \\
-\hspace*{2em} 1. Book design \hspace*{2em} I. Title
-
-
-\vfill
-
-Printed in the World
-
-The Herries Press, \\
-Normandy Park, WA \\
-\texttt{herries dot press (at) earthlink dot net}
+Gavin E.\ O'Brien\\
+Boston, Massachusetts\\
+\texttt{gobrienvt@icloud.com}
 
 %%%%{\LARGE\plogo}
 \vspace*{2\baselineskip}
@@ -249,10 +213,10 @@ Normandy Park, WA \\
 \input{./Chapter06/Beatrice4OBrien}
 \input{./Chapter06/Gen4bib}
 \appendix
+\renewcommand{\chaptername}{Appendix}
 \include{./further_research}
 \include{./Appendix/cemetery}
 \include{./person_list}
-\include{./Appendixbib}
 
 \backmatter
 
