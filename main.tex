@@ -1,4 +1,5 @@
-\documentclass[11pt,oneside]{memoir}
+%\documentclass[11pt,oneside]{memoir}
+\documentclass{memoir}
 %\documentclass[ebook]{memoir}
 %\setstocksize{9.25in}{6.125in}
 %\settrimmedsize{9in}{6in}{*}
@@ -21,6 +22,8 @@
 \makeindex
 % \showindexmarks 
 \frenchspacing
+\input{ushyphex}
+\hyphenation{Bri-en Ma-ho-ney Ma-ho-ny Fern-ald Mac-dou-gall Massa-chu-setts}
 
 %\usepackage{draftwatermark}
 %\SetWatermarkText{Draft}
@@ -113,7 +116,21 @@
 		\vspace{0.5\baselineskip}
 	}
 
-\newcommand*{\titleS}{\begingroup% Scripts, T&H p 151
+ \begin{document}
+ 	
+\frontmatter
+\pagestyle{empty}
+
+% half-title page
+{\begingroup
+\centering
+\vspace*{0.1\textheight}
+{\Huge Descendants of William O'Brien}\\[\baselineskip]
+\endgroup}
+\cleardoublepage
+
+% full-title page
+{\begingroup% Scripts, T&H p 151
 	\centering
 	\vspace*{0.1\textheight}
 	{\Huge Descendants of William O'Brien}\\[\baselineskip]
@@ -121,12 +138,6 @@
 	{\large\itshape by Gavin E. O'Brien}\\[\baselineskip]
 	\vfill
 	\endgroup}
-
- \begin{document}
- 	
-\frontmatter
-\pagestyle{empty}
-\titleS
 \clearpage
 
 %% copyrightpage
