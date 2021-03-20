@@ -21,7 +21,7 @@
 % \showindexmarks 
 \frenchspacing
 \input{ushyphex}
-\hyphenation{Bri-en Ma-ho-ney Ma-ho-ny Fern-ald Mac-dou-gall Mas-sa-chu-setts Wa-ter-grass-hill}
+\hyphenation{Bri-en Ma-ho-ney Ma-ho-ny Fern-ald Mac-dou-gall Mas-sa-chu-setts Wa-ter-grass-hill Rob-ert Fern-ald}
 \checkandfixthelayout
 
 %\usepackage{draftwatermark}
@@ -178,8 +178,13 @@ Boston, Massachusetts\\
 \include{./Intro/Intro}
 
 \cleardoublepage
-\addcontentsline{toc}{chapter}{Chart: First Three Generations}
-\includepdf[pages=1-2]{descendant.pdf}
+%\addcontentsline{toc}{chapter}{Chart: First Three Generations}
+\includepdf[
+	pages=1-2, 
+	addtotoc={1, chapter, 1, Chart: First Three Generations, genchart},
+	addtolist={1, figure, Chart: First Three Generations, fig:genchart}
+	]{descendant.pdf}
+\cleardoublepage
 
 \listoffigures
 
@@ -229,7 +234,14 @@ Boston, Massachusetts\\
 \renewcommand{\chaptername}{Appendix}
 \include{./further_research}
 \include{./Appendix/cemetery}
-\include{./person_list}
+
+\cleardoublepage
+\includepdf[
+	pages=1-2, 
+	addtotoc={1, chapter, 1, Descendancy Tree, treechart},
+	addtolist={1, figure, Descendancy Tree, fig:treechart}
+]{tree.pdf}
+\cleardoublepage
 
 \backmatter
 
