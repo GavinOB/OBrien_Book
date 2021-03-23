@@ -16,13 +16,14 @@
 \graphicspath{ {./images/} }
 \usepackage[final]{microtype}
 \usepackage{imakeidx}
-\indexsetup{level=\chapter}
+\indexsetup{level=\chapter, othercode=\footnotesize}
 \makeindex
 % \showindexmarks 
 \frenchspacing
 \input{ushyphex}
-\hyphenation{Bri-en Ma-ho-ney Ma-ho-ny Fern-ald Mac-dou-gall Mas-sa-chu-setts Wa-ter-grass-hill Rob-ert Fern-ald}
-\checkandfixthelayout
+\hyphenation{Bri-en Ma-ho-ney Ma-ho-ny Fern-ald Mac-dou-gall Mas-sa-chu-setts Wa-ter-grass-hill Rob-ert Fern-ald Mc-Lean Nor-folk Coun-ty Need-ham}
+\usepackage{showframe}
+\usepackage{xurl}
 
 %\usepackage{draftwatermark}
 %\SetWatermarkText{Draft}
@@ -120,16 +121,26 @@
 \frontmatter
 \pagestyle{empty}
 
+\author{Gavin E.\ O'Brien}
+\title{Descendants of William O'Brien}
+
 % half-title page
 {\begingroup
 \centering
 \vspace*{0.1\textheight}
 {\Huge Descendants of William O'Brien}\\[\baselineskip]
 \endgroup}
-\cleardoublepage
+\clearpage
 
-\author{Gavin E.\ O'Brien}
-\title{Descendants of William O'Brien}
+% frontispiece
+
+\begin{figure}[p]
+	\centering
+	\includegraphics[height=\textheight]{watergrasshill_full}
+\label{fig:frontispiece}
+\end{figure}
+
+\clearpage
 
 % full-title page
 {\begingroup% Scripts, T&H p 151
@@ -147,13 +158,15 @@
 \footnotesize
 \parindent 0pt
 \parskip \baselineskip
-\begin{figure}
+\vspace*{\fill}
+\begin{figure}[h]
 	\includegraphics[width=88px]{by-nc}
 \end{figure}
-\textcopyright 2021 by Gavin E. O'Brien\\
-Unless otherwise stated, this work is licensed under Creative Commons Attribution-NonCommercial 4.0 International. To view a copy of this license, visit \url{http://creativecommons.org/licenses/by-nc/4.0/}.
+\textcopyright 2021 by Gavin E. O'Brien. Unless otherwise noted, the text of this work is licensed under Creative Commons Attribution-NonCommercial 4.0 International. To view a copy of this license, visit \url{http://creativecommons.org/licenses/by-nc/4.0/}.
 
 See ``Credits'' chapter for image attributions.
+
+Frontispiece: Ordnance Survey Ireland, map series ``Historic 6'' First Edition B\&W (1829--41),'' scale 1:5,000, map sheet CK053, centre coordinates ITM 576382,584458, published 18 Mar 2020.
 
 \begin{center}
 	\begin{tabular}{ll}
@@ -165,9 +178,7 @@ Gavin E.\ O'Brien\\
 Boston, Massachusetts\\
 \texttt{gobrienvt@icloud.com}
 
-%%%%{\LARGE\plogo}
 \vspace*{2\baselineskip}
-
 
 \endgroup
 \clearpage
@@ -175,18 +186,21 @@ Boston, Massachusetts\\
 
 \tableofcontents
 
-\include{./Intro/Intro}
+\cleardoublepage
+
+\listoffigures
 
 \cleardoublepage
-%\addcontentsline{toc}{chapter}{Chart: First Three Generations}
+
+\include{./Intro/Intro}
+
+\cleartoverso
 \includepdf[
 	pages=1-2, 
 	addtotoc={1, chapter, 1, Chart: First Three Generations, genchart},
 	addtolist={1, figure, Chart: First Three Generations, fig:genchart}
 	]{descendant.pdf}
 \cleardoublepage
-
-\listoffigures
 
 \mainmatter
 % \include{./Chapter01/chapter01_test}
@@ -235,7 +249,7 @@ Boston, Massachusetts\\
 \include{./further_research}
 \include{./Appendix/cemetery}
 
-\cleardoublepage
+\clearpage
 \includepdf[
 	pages=1-2, 
 	addtotoc={1, chapter, 1, Descendancy Tree, treechart},
