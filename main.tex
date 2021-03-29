@@ -21,9 +21,12 @@
 % \showindexmarks 
 \frenchspacing
 \input{ushyphex}
-\hyphenation{Bri-en Ma-ho-ney Ma-ho-ny Fern-ald Mac-dou-gall Mas-sa-chu-setts Wa-ter-grass-hill Rob-ert Fern-ald Mc-Lean Nor-folk Coun-ty Need-ham Steph-en}
+\hyphenation{Bri-en Ma-ho-ney Ma-ho-ny Fern-ald Mac-dou-gall Mas-sa-chu-setts Wa-ter-grass-hill Rob-ert Fern-ald Mc-Lean Nor-folk Coun-ty Need-ham Steph-en Wa-ter-grass-hill}
 \usepackage{showframe}
 \usepackage{xurl}
+\usepackage{perpage}
+\MakePerPage{footnote}
+\captionnamefont{\small}\captiontitlefont{\small}
 
 %\usepackage{draftwatermark}
 %\SetWatermarkText{Draft}
@@ -57,6 +60,13 @@
 \addto{\captionsUSenglish}{%
 	\renewcommand{\bibname}{\chaptername\ \thechapter\ Citations}
 }
+
+ % Redefine footnote symbols
+\makeatletter
+\def\@fnsymbol#1{\ensuremath{\ifcase#1\or *\or \dagger\or \ddagger\or
+		**\or \dagger\dagger \or \ddagger\ddagger \else\@ctrerr\fi}}
+\makeatother
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 % Font styling for people and numbered lists
 \newcommand{\MainPerson}[1]{\textbf{\textsc{#1}}}
@@ -166,7 +176,16 @@
 
 See ``Credits'' chapter for image attributions.
 
-Frontispiece: Ordnance Survey Ireland, map series ``Historic 6'' First Edition B\&W (1829--41),'' scale 1:5,000, map sheet CK053, centre coordinates ITM 576382,584458, published 18 Mar 2020.
+Frontispiece:
+
+{ 
+\centering
+\textbf{\textit{
+		\textcopyright\ Ordnance Survey Ireland/Government of Ireland\\Copyright Permit No.\ MP 001721
+	}}\par
+}
+	
+Map series ``Historic 6\textquotedbl\ First Edition B\&W (1829--41),'' scale 1:5,000, map sheet CK053, centre coordinates ITM 576382,584458, published 18 Mar 2020.
 
 \begin{center}
 	\begin{tabular}{ll}
@@ -184,7 +203,9 @@ Boston, Massachusetts\\
 \clearpage
 \pagestyle{headings}
 
+\begin{KeepFromToc}
 \tableofcontents
+\end{KeepFromToc}
 
 \cleardoublepage
 
@@ -252,8 +273,8 @@ Boston, Massachusetts\\
 \clearpage
 \includepdf[
 	pages=1-2, 
-	addtotoc={1, chapter, 1, Descendancy Tree, treechart},
-	addtolist={1, figure, Descendancy Tree, fig:treechart}
+	addtotoc={1, chapter, 1, Chart: Descendancy Tree, treechart},
+	addtolist={1, figure, Chart: Descendancy Tree, fig:treechart}
 ]{tree.pdf}
 \cleardoublepage
 
