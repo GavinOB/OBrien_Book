@@ -8,7 +8,6 @@
 \usepackage[textlf]{MinionPro}
 \usepackage{pdfpages}
 \usepackage{dpfloat}
-\nobibintoc
 \usepackage[super,comma,square,numbers]{natbib} % superscript numerical citations
 \renewcommand*{\bibfont}{\raggedright\small}
 \newcommand{\bb}[1]{\textbf{\hyperpage{#1}}} % needed for bold & hyperlinked index pages
@@ -18,7 +17,6 @@
 \usepackage{imakeidx}
 \indexsetup{level=\chapter, othercode=\footnotesize}
 \makeindex
-% \showindexmarks 
 \frenchspacing
 \input{ushyphex}
 \hyphenation{Bri-en Ma-ho-ney Ma-ho-ny Fern-ald Mac-dou-gall Mas-sa-chu-setts Wa-ter-grass-hill Rob-ert Fern-ald Mc-Lean Nor-folk Coun-ty Need-ham Steph-en Wa-ter-grass-hill}
@@ -32,14 +30,21 @@
 %\SetWatermarkScale{2}
 %\SetWatermarkColor[gray]{0.9}
 
-\usepackage[draft]{hyperref}
-\hypersetup{
-	colorlinks = true,
-	urlcolor = blue,
-	linkcolor = blue,
-	citecolor = blue
-}
-\urlstyle{same}
+%% For draft and ebook
+%\usepackage[pagebackref]{hyperref}
+\usepackage{showframe}
+% \showindexmarks 
+
+%\usepackage[draft]{hyperref}
+%\hypersetup{
+%	colorlinks = true,
+%	urlcolor = blue,
+%	linkcolor = blue,
+%	citecolor = blue
+%}
+%\urlstyle{same}
+\usepackage{nohyperref}
+\usepackage{url}
 
 % Don't reset person numbering between chapters
 \counterwithout{section}{chapter}
@@ -127,6 +132,12 @@
 
  \begin{document}
  	
+\renewcommand{\bibsection}{%
+	\section*{\bibname}
+	\markright{\uppercase{\bibname}}
+	%\addcontentsline{toc}{section}{\bibname}
+}
+ 	
 \frontmatter
 \pagestyle{empty}
 
@@ -145,7 +156,7 @@
 
 \begin{figure}[p]
 	\centering
-	\includegraphics[width=3.08in]{watergrasshill}
+	\includegraphics[height=\textheight]{watergrasshill}
 \label{fig:frontispiece}
 \end{figure}
 
@@ -169,7 +180,7 @@
 \parskip \baselineskip
 \vspace*{\fill}
 \begin{figure}[h]
-	\includegraphics[width=88px]{by-nc}
+	\includegraphics[width=88pt]{by-nc}
 \end{figure}
 \textcopyright 2021 by Gavin E. O'Brien. Unless otherwise noted, the text of this work is licensed under Creative Commons Attribution-NonCommercial 4.0 International. To view a copy of this license, visit \url{http://creativecommons.org/licenses/by-nc/4.0/}.
 
@@ -214,13 +225,15 @@ Boston, Massachusetts\\
 
 \include{./Intro/Intro}
 
-\cleartoverso
-\includepdf[
-	pages=1-2, 
-	addtotoc={1, chapter, 1, Chart: First Three Generations, genchart},
-	addtolist={1, figure, Chart: First Three Generations, fig:genchart}
-	]{descendant.pdf}
-\cleardoublepage
+%\cleartoverso
+%\includepdf[
+%	lastpage=2,
+%	pages=1-2, 
+%	addtotoc={1, chapter, 1, Chart: First Three Generations, genchart},
+%	addtolist={1, figure, Chart: First Three Generations, fig:genchart}
+%	]{descendant.pdf}
+%\cleardoublepage
+
 
 \mainmatter
 % \include{./Chapter01/chapter01_test}
@@ -269,13 +282,14 @@ Boston, Massachusetts\\
 \include{./further_research}
 \include{./Appendix/cemetery}
 
-\clearpage
-\includepdf[
-	pages=1-2, 
-	addtotoc={1, chapter, 1, Chart: Descendancy Tree, treechart},
-	addtolist={1, figure, Chart: Descendancy Tree, fig:treechart}
-]{tree.pdf}
-\cleardoublepage
+%\clearpage
+%\includepdf[
+%	lastpage=2,
+%	pages=1-2, 
+%	addtotoc={1, chapter, 1, Chart: Descendancy Tree, treechart},
+%	addtolist={1, figure, Chart: Descendancy Tree, fig:treechart}
+%]{tree.pdf}
+%\cleardoublepage
 
 \backmatter
 
