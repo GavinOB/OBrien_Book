@@ -2,10 +2,12 @@
 %\setstocksize{9.25in}{6.25in}
 %\settrimmedsize{9in}{6in}{*}
 \usepackage[USenglish]{babel}
+\usepackage{lipsum}
 \usepackage{csquotes}
 \usepackage[en-US]{datetime2}
 \usepackage[T1]{fontenc}
 \usepackage[textlf]{MinionPro}
+\usepackage[textlf]{MyriadPro}
 \usepackage{pdfpages}
 \usepackage{dpfloat}
 \usepackage[super,comma,square,numbers]{natbib} % superscript numerical citations
@@ -20,10 +22,14 @@
 \frenchspacing
 \input{ushyphex}
 \hyphenation{Bri-en Ma-ho-ney Ma-ho-ny Fern-ald Mac-dou-gall Mas-sa-chu-setts Wa-ter-grass-hill Rob-ert Fern-ald Mc-Lean Nor-folk Coun-ty Need-ham Steph-en Wa-ter-grass-hill}
-\usepackage{xurl}
-\usepackage{perpage}
-\MakePerPage{footnote}
+\usepackage{xurl} % break URLs within words
+\usepackage[perpage]{footmisc} % reset footnote counter on each new page
 \captionnamefont{\small}\captiontitlefont{\small}
+
+% Use sans serif font (Myriad Pro) for chapter titles
+\chapterstyle{section}
+\renewcommand*{\chapnumfont}{\normalfont\huge\bfseries\sffamily}
+\renewcommand*{\chaptitlefont}{\normalfont\huge\bfseries\sffamily}
 
 %\usepackage{draftwatermark}
 %\SetWatermarkText{Draft}
@@ -32,7 +38,7 @@
 
 %% For draft and ebook
 %\usepackage[pagebackref]{hyperref}
-\usepackage{showframe}
+%\usepackage{showframe}
 % \showindexmarks 
 
 \usepackage[draft]{hyperref}
@@ -142,13 +148,15 @@
 \pagestyle{empty}
 
 \author{Gavin E.\ O'Brien}
-\title{Descendants of William O'Brien}
+\title{Descendants of William O'Brien and Mary Sexton}
 
 % half-title page
 {\begingroup
+\begin{Spacing}{1.75}
 \centering
 \vspace*{0.1\textheight}
-{\Huge Descendants of William O'Brien}\\[\baselineskip]
+{\Huge Descendants of William O'Brien and Mary Sexton}\\[\baselineskip]
+\end{Spacing}
 \endgroup}
 \clearpage
 
@@ -166,7 +174,7 @@
 {\begingroup% Scripts, T&H p 151
 	\centering
 	\vspace*{0.1\textheight}
-	{\Huge Descendants of William O'Brien}\\[\baselineskip]
+	\begin{Spacing}{1.75}{\Huge Descendants of William O'Brien and Mary Sexton}\end{Spacing}
 	{\LARGE of Watergrasshill, Ireland, and Boston, Massachusetts}\\[\baselineskip]
 	{\large\itshape by Gavin E. O'Brien}\\[\baselineskip]
 	\vfill
@@ -199,7 +207,7 @@ Map series ``Historic 6\textquotedbl\ First Edition B\&W (1829--41),'' scale 1:5
 
 \begin{center}
 	\begin{tabular}{ll}
-		First edition:  & March 2021 \\
+		First edition:  & April 2021 \\
 	\end{tabular}
 \end{center}
 
@@ -254,6 +262,7 @@ Boston, Massachusetts\\
 \input{./Chapter05/William3OBrien}
 \input{./Chapter05/John3OBrien}
 \input{./Chapter05/Hannah3Ward}
+\input{./Chapter05/Ellen3OBrien}
 \input{./Chapter05/Michael3OBrien}
 \input{./Chapter05/Frances3OBrien}
 \input{./Chapter05/Edward3OBrien}
@@ -267,6 +276,7 @@ Boston, Massachusetts\\
 \input{./Chapter06/Francis4OBrien}
 \input{./Chapter06/Pauline4OBrien}
 \input{./Chapter06/Mildred4OBrien}
+\input{./Chapter06/Edward4Duggan}
 \input{./Chapter06/MaryAlice4Flynn}
 \input{./Chapter06/Edith4Wickens}
 \input{./Chapter06/Albert4Wickens}
