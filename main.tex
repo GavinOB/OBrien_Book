@@ -20,16 +20,22 @@
 \indexsetup{level=\chapter, othercode=\footnotesize}
 \makeindex
 \frenchspacing
+\nouppercaseheads
 \input{ushyphex}
 \hyphenation{Bri-en Ma-ho-ney Ma-ho-ny Fern-ald Mac-dou-gall Mas-sa-chu-setts Wa-ter-grass-hill Rob-ert Fern-ald Mc-Lean Nor-folk Coun-ty Need-ham Steph-en Wa-ter-grass-hill}
 \usepackage{xurl} % break URLs within words
 \usepackage[perpage]{footmisc} % reset footnote counter on each new page
 \captionnamefont{\small}\captiontitlefont{\small}
 
+% Custom page style for sans serif headings
+\copypagestyle{ssheadings}{headings}
+\makeevenhead{ssheadings}{\thepage}{}{\small\sffamily\slshape\leftmark}
+\makeoddhead{ssheadings}{\small\sffamily\slshape\rightmark}{}{\thepage}
+
 % Use sans serif font (Myriad Pro) for chapter titles
-\chapterstyle{section}
-\renewcommand*{\chapnumfont}{\normalfont\huge\bfseries\sffamily}
-\renewcommand*{\chaptitlefont}{\normalfont\huge\bfseries\sffamily}
+\renewcommand*{\chapnamefont}{\normalfont\huge\sffamily}
+\renewcommand*{\chapnumfont}{\normalfont\huge\sffamily}
+\renewcommand*{\chaptitlefont}{\normalfont\Huge\sffamily}
 
 %\usepackage{draftwatermark}
 %\SetWatermarkText{Draft}
@@ -140,7 +146,7 @@
  	
 \renewcommand{\bibsection}{%
 	\section*{\bibname}
-	\markright{\uppercase{\bibname}}
+	\markright{\bibname}
 	%\addcontentsline{toc}{section}{\bibname}
 }
  	
@@ -219,7 +225,7 @@ Boston, Massachusetts\\
 
 \endgroup
 \clearpage
-\pagestyle{headings}
+\pagestyle{ssheadings}
 
 \begin{KeepFromToc}
 \tableofcontents
