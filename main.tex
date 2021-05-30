@@ -100,23 +100,25 @@
 % Font styling for kids and grandkids sections
 \newenvironment{KidsIntro}
 	{
-	\vspace{0.5\baselineskip}
+%\setlength{\parskip}{.5\baselineskip plus2pt}
+	\nonzeroparskip
 	\begin{small}
 	}
 	{
-	\par
 	\end{small}
-	\vspace{0.5\baselineskip}
 	}
+
 \newenvironment{Kids}
 	{
 		\begin{small}
 		\begin{hangparas}{0.65in}{1}
+		\vspace*{.5\baselineskip plus2pt}
 	}
 	{
 		\end{hangparas}
 		\end{small}	
 	}
+
 \newenvironment{KidsMoreText}
 	{
 		\setlength{\parindent}{1.0in}
@@ -127,23 +129,23 @@
 
 \newenvironment{GrandkidsIntro}
 {
-	\vspace{0.5\baselineskip}
+	\nonzeroparskip
 	\setlength{\parindent}{0.65in}
 	}
 	{
-		\par
-	\vspace{0.5\baselineskip}
+		
 }
 
 \newenvironment{Grandkids}
 	{
 		\begin{small}
 		\begin{hangparas}{1.1in}{1}
+		\vspace*{.5\baselineskip plus2pt}
 	}
 	{
 		\end{hangparas}
 		\end{small}
-		\vspace{0.5\baselineskip}
+		\vspace*{.5\baselineskip plus2pt}
 	}
 
  \begin{document}
