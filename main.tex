@@ -27,8 +27,9 @@
 \usepackage[perpage]{footmisc} % reset footnote counter on each new page
 \captionnamefont{\small}\captiontitlefont{\small}
 \interfootnotelinepenalty=10000 % prevent footnotes from being split across pages
-% \raggedbottom
+%\raggedbottom
 \usepackage{fnbreak}
+\pdfminorversion=7
 
 % Custom page style for sans serif headings
 \copypagestyle{ssheadings}{headings}
@@ -78,7 +79,7 @@
 
 % Rename "Bibliography"
 \addto{\captionsUSenglish}{%
-	\renewcommand{\bibname}{\chaptername\ \thechapter\ Citations}
+	\renewcommand{\bibname}{\chaptername\ \thechapter\ Citations}%
 }
 
  % Redefine footnote symbols
@@ -98,61 +99,59 @@
 \newcommand{\GrandkidNum}[1]{\noindent\makebox[1.1in]{\makebox[0.95in][r]{\hfill #1}}}
 
 % Font styling for kids and grandkids sections
-\newenvironment{KidsIntro}
-	{
-%\setlength{\parskip}{.5\baselineskip plus2pt}
+\newenvironment{KidsIntro}%
+	{%
 	\nonzeroparskip
-	\begin{small}
-	}
-	{
-	\end{small}
-	}
-
-\newenvironment{Kids}
-	{
-		\begin{small}
-		\begin{hangparas}{0.65in}{1}
-		\vspace*{.5\baselineskip plus2pt}
-	}
-	{
-		\end{hangparas}
-		\end{small}	
+	\begin{small}%
+	}%
+	{%
+	\end{small}%
 	}
 
-\newenvironment{KidsMoreText}
-	{
-		\setlength{\parindent}{1.0in}
-	}
-	{
-	
+\newenvironment{Kids}%
+	{%
+		\vspace{.5\baselineskip plus2pt}%
+		\begin{small}%
+		\begin{hangparas}{0.65in}{1}%
+	}%
+	{%
+		\end{hangparas}%
+		\end{small}%
 	}
 
-\newenvironment{GrandkidsIntro}
-{
+\newenvironment{KidsMoreText}%
+	{%
+		\setlength{\parindent}{1.0in}%
+	}%
+	{%
+		\par
+	}
+
+\newenvironment{GrandkidsIntro}%
+{%
 	\nonzeroparskip
-	\setlength{\parindent}{0.65in}
+	\setlength{\parindent}{0.65in}%
+	}%
+	{%
 	}
-	{
-		
-}
 
-\newenvironment{Grandkids}
-	{
-		\begin{small}
-		\begin{hangparas}{1.1in}{1}
-		\vspace*{.5\baselineskip plus2pt}
-	}
-	{
-		\end{hangparas}
-		\end{small}
-		\vspace*{.5\baselineskip plus2pt}
+\newenvironment{Grandkids}%
+	{%
+		\begin{small}%
+		\begin{hangparas}{1.1in}{1}%
+		\vspace*{.5\baselineskip plus2pt}%
+	}%
+	{%
+		\end{hangparas}%
+		\end{small}%
+		\vspace*{.5\baselineskip plus2pt}%
 	}
 
  \begin{document}
  	
 \renewcommand{\bibsection}{%
-	\section*{\bibname}
-	\markright{\bibname}
+	\section*{\bibname}%
+	\markright{\bibname}%
 	%\addcontentsline{toc}{section}{\bibname}
 }
  	
@@ -164,11 +163,11 @@
 
 % half-title page
 {\begingroup
-\begin{Spacing}{1.75}
+\begin{Spacing}{1.75}%
 \centering
-\vspace*{0.1\textheight}
-{\Huge Descendants of William O'Brien and Mary Sexton}\\[\baselineskip]
-\end{Spacing}
+\vspace*{0.1\textheight}%
+{\Huge Descendants of William O'Brien and Mary Sexton}\\[\baselineskip]%
+\end{Spacing}%
 \endgroup}
 \clearpage
 
@@ -185,20 +184,20 @@
 % full-title page
 {\begingroup% Scripts, T&H p 151
 	\centering
-	\vspace*{0.1\textheight}
-	\begin{Spacing}{1.75}{\Huge Descendants of William O'Brien and Mary Sexton}\end{Spacing}
-	{\LARGE of Watergrasshill, Ireland, and Boston, Massachusetts}\\[\baselineskip]
-	{\large\itshape by Gavin E. O'Brien}\\[\baselineskip]
+	\vspace*{0.1\textheight}%
+	\begin{Spacing}{1.75}{\Huge Descendants of William O'Brien and Mary Sexton}\end{Spacing}%
+	{\LARGE of Watergrasshill, Ireland, and Boston, Massachusetts}\\[\baselineskip]%
+	{\large\itshape by Gavin E. O'Brien}\\[\baselineskip]%
 	\vfill
 	\endgroup}
 \clearpage
 
 %% copyrightpage
-\begingroup
+{\begingroup%
 \footnotesize
 \parindent 0pt
 \parskip \baselineskip
-\vspace*{\fill}
+\vspace*{\fill}%
 \begin{figure}[h]
 	\includegraphics[width=88pt]{by-nc}
 \end{figure}
@@ -208,9 +207,9 @@ See ``Credits'' chapter for image attributions.
 
 Frontispiece:
 
-{ 
+{%
 \centering
-\textbf{\textit{
+\textbf{\textit{%
 		\textcopyright\ Ordnance Survey Ireland/Government of Ireland\\Copyright Permit No.\ MP 001721
 	}}\par
 }
@@ -219,17 +218,20 @@ Map series ``Historic 6\textquotedbl\ First Edition B\&W (1829--41),'' scale 1:5
 
 \begin{center}
 	\begin{tabular}{ll}
-		First edition:  & May 2021 \\
+		First edition:  & June 2021 \\
 	\end{tabular}
 \end{center}
 
-Gavin E.\ O'Brien\\
-Boston, Massachusetts\\
+\parskip 0pt
+Gavin E.\ O'Brien
+
+Boston, Massachusetts
+
 \texttt{gobrienvt@icloud.com}
 
 \vspace*{2\baselineskip}
 
-\endgroup
+\endgroup}
 \clearpage
 \pagestyle{ssheadings}
 
