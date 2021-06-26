@@ -1,12 +1,16 @@
-\documentclass[ebook]{memoir}
+\documentclass[ebook,draft]{memoir}
 %\setstocksize{9.25in}{6.25in}
 %\settrimmedsize{9in}{6in}{*}
+\tracingpages1
+\tracingoutput1
+%\directlua{dofile("DetectUnderfull.lua")}
 \usepackage[USenglish]{babel}
 \usepackage{csquotes}
 \usepackage[en-US]{datetime2}
 \usepackage[T1]{fontenc}
 \usepackage[textlf]{MinionPro}
 \usepackage[textlf]{MyriadPro}
+\usepackage{MnSymbol}
 \usepackage{pdfpages}
 \usepackage{dpfloat}
 \usepackage[super,comma,square,numbers]{natbib} % superscript numerical citations
@@ -40,7 +44,7 @@
 \renewcommand*{\chapnamefont}{\normalfont\huge\sffamily}
 \renewcommand*{\chapnumfont}{\normalfont\huge\sffamily}
 \renewcommand*{\chaptitlefont}{\normalfont\Huge\sffamily}
-\renewcommand*{\secheadstyle}{\normalfont\Large\sffamily}
+%\renewcommand*{\secheadstyle}{\normalfont\Large\sffamily}
 
 %\usepackage{draftwatermark}
 %\SetWatermarkText{Draft}
